@@ -5,11 +5,12 @@
 .nav {
     height: 100%;
     width: 250px;
-    border: 1px solid rgb(59, 207, 200);
+    border: 1px solid rgb(228, 207, 207);
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 10px 0;
+    box-shadow: 0 2px 8px rgba(160, 140, 140, 0.1);
 }
 
 .logodaulogodau {

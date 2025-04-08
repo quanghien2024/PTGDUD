@@ -1,13 +1,17 @@
 .header {
-    border: 1px solid rgb(59, 207, 200);
+    border-top: 1px solid rgb(228, 207, 207);
+    border-right: 1px solid rgb(228, 207, 207);
+    border-bottom: 1px solid rgb(228, 207, 207);
     width: 100%;
     max-width: 1200px;
     padding: 10px;
     display: flex;
     justify-content: space-between; 
     align-items: center; 
+    box-shadow: 0 2px 8px rgba(160, 140, 140, 0.1);
 }
 
+/* haizzzzzzzzzzzzzhaizzzzzzzzzzzzz */
 .dashboard {
     margin-left: 40px; 
     padding-left: 10px; 
