@@ -71,6 +71,23 @@
       "orderValue": 680,
       "orderDate": "02/10/2023",
       "status": "In-progress"
+    },
+    {
+      "id": "ade4",
+      "name": "Pham Quang Hien",
+      "company": "Vip",
+      "orderValue": "2",
+      "orderDate": "2025-04-10",
+      "status": "Completed"
+    },
+    {
+      "id": "b38d",
+      "name": "Long",
+      "company": "Normal",
+      "orderValue": "300",
+      "orderDate": "2025-04-25",
+      "status": "In-progress",
+      "avatar": "/avatarclone.png"
     }
   ]
 }

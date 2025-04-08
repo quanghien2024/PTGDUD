@@ -3,8 +3,48 @@
     width: 100%;
     max-width: 1200px;
     padding: 10px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
 }
 
-h1 {
-    text-align: center;
+.dashboard {
+    margin-left: 40px; 
+    padding-left: 10px; 
+    color: #f06292; 
+    margin: 0;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.search-container {
+    display: inline-flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    padding: 5px 10px;
+    width: 300px;
+}
+
+.search-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 8px;
+}
+
+.iconright {
+    display: flex;
+    flex-direction: row; 
+    gap: 10px; 
+    margin-left: auto; 
+}
+
+.icon {
+    width: 40px;
+}
+
+.search-text {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    font-style: italic;
 }

@@ -62,7 +62,7 @@ const Table = ({ onEdit }) => {
               <td><input type="checkbox" aria-label={`Select customer ${customer.name}`}/></td>
               <td className="customer-name">
                 <img
-                  src={customer.avatar || '/default-avatar.png'} 
+                  src={customer.avatar || '/avatarclone.png'} 
                   alt={`${customer.name}'s avatar`}
                   style={{ width: '32px', height: '32px', borderRadius: '50%', objectFit: 'cover', marginRight: '8px' }}
                 />

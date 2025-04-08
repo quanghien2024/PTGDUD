@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Board from "../components/Board/Board";
 import Table from "../components/Table/Table";
 import Modal from "../components/Table/Modal";
+import ModalAdd from "../components/Table/ModalAdd";  
 import Overview from '../assets/Squares four 1.png';
 import Detailedreport from '../assets/Filetext1.png';
 import Download from '../assets/Download.png';
@@ -9,17 +10,22 @@ import Export from '../assets/Moveup.png';
 import './AdminPage.css';
 
 function OverviewPage() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [isAddModalOpen, setIsAddModalOpen] = useState(false);  
   const [customerToEdit, setCustomerToEdit] = useState(null);
 
   const handleEditClick = (customer) => {
     setCustomerToEdit(customer);
-    setIsModalOpen(true);
+    setIsEditModalOpen(true);
   };
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
+  const handleCloseEditModal = () => {
+    setIsEditModalOpen(false);
     setCustomerToEdit(null);
+  };
+
+  const handleCloseAddModal = () => {
+    setIsAddModalOpen(false);
   };
 
   const handleSaveChanges = async (updatedCustomer) => {
@@ -33,15 +39,41 @@ function OverviewPage() {
 
     if (response.ok) {
       alert("Customer updated successfully!");
-      // Refresh or update state here if needed
-      // For example, call fetchData again to update the table
     } else {
       alert("Error updating customer.");
     }
 
-    handleCloseModal();
+    handleCloseEditModal();
   };
 
+
+  const handleAddCustomer = async (newCustomer) => {
+    if (!newCustomer.avatar) {
+      newCustomer.avatar = '/avatarclone.png'; 
+    }
+  
+    const response = await fetch('http://localhost:3001/customers', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: newCustomer.name,
+        company: newCustomer.company,
+        orderValue: newCustomer.orderValue,
+        orderDate: newCustomer.orderDate,
+        status: newCustomer.status,
+        avatar: newCustomer.avatar, 
+      }),
+    });
+  
+    if (response.ok) {
+      alert("Customer added successfully!");
+    } else {
+      alert("Error adding customer.");
+    }
+  };
+  
   return (
     <div className="content-padding">
       <div className="view">
@@ -65,20 +97,23 @@ function OverviewPage() {
             <img src={Download} alt="Download" className="button-icon" />
             <span>Import</span>
           </button>
-          <button className="import-button">
+          <button className="import-button" onClick={() => setIsAddModalOpen(true)}>
             <img src={Export} alt="Export" className="button-icon" />
-            <span>Export</span>
+            <span>Add</span>
           </button>
         </div>
       </div>
-
       <Table onEdit={handleEditClick} />
-
       <Modal
-        isOpen={isModalOpen}
-        onClose={handleCloseModal}
+        isOpen={isEditModalOpen}
+        onClose={handleCloseEditModal}
         customer={customerToEdit}
         onSave={handleSaveChanges}
+      />
+      <ModalAdd
+        isOpen={isAddModalOpen}
+        onClose={handleCloseAddModal}
+        onSave={handleAddCustomer}
       />
     </div>
   );
