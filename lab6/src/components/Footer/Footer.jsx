@@ -4,9 +4,9 @@ import Visily from '../../assets/Visily.png';
 function Footer() {
     return (
         <>
-            <div className="footer"> {/* Đổi class từ header thành footer */}
+            <div className="footer"> 
                 <span>Made with</span>
-                <img src={Visily} alt="Biểu tượng nhỏ" className="footer-image" /> {/* Thêm class "footer-image" */}
+                <img src={Visily} alt="Biểu tượng nhỏ" className="footer-image" />
             </div>
         </>
     );
