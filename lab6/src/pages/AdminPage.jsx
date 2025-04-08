@@ -1,12 +1,16 @@
-import Board from "../components/Board/Board";
-import Table from "../components/Table/Table";
+import React from 'react'; 
 import Header from "../components/Header/Header";
 import Nav from "../components/Nav/Nav";
 import Footer from "../components/Footer/Footer";
-import Overview from '../assets/Squares four 1.png';
-import Detailedreport from '../assets/Filetext1.png';
-import Download from '../assets/Download.png';
-import Export from '../assets/Moveup.png';
+import { Routes, Route, Navigate } from 'react-router-dom';
+
+
+import OverviewPage from '../pages/OverviewPage';
+import ProjectsPage from '../pages/ProjectsPage';
+import TeamPage from '../pages/TeamPage';
+import AnalyticsPage from '../pages/Analytics';
+import MessagesPage from '../pages/Messages';
+import IntegrationsPage from '../pages/Integrations';
 
 import './AdminPage.css';
 
@@ -15,36 +19,29 @@ function AdminPage() {
         <div className="admin-page">
             <div className="main-content-area">
                 <div className="nav-side">
-                    <Nav></Nav>
+                    <Nav />
                 </div>
+
                 <div className="content-side">
-                    <Header></Header>
-                    <div className="view">
-                       <img src={Overview} alt="Biểu tượng nhỏ" />
-                       <p>Overview</p>
+                    <Header />
+                    <div className="page-content"> 
+                        <Routes>
+                            <Route path="/overview" element={<OverviewPage />} />
+                            <Route path="/projects" element={<ProjectsPage />} />
+                            <Route path="/team" element={<TeamPage />} />
+                            <Route path="/analytics" element={<AnalyticsPage />} />
+                            <Route path="/messages" element={<MessagesPage />} />
+                            <Route path="/integrations" element={<IntegrationsPage />} />
+
+                            <Route path="/" element={<Navigate replace to="/overview" />} />
+                            <Route path="*" element={
+                                <div style={{ padding: '20px' }}> 
+                                    <h1>404 - Page Not Found</h1>
+                                    <p>The page you are looking for does not exist.</p>
+                                </div>
+                            } />
+                        </Routes>
                     </div>
-                    <div className="dash-board">
-                        <Board title="Turnover" />
-                        <Board title="Profit" />
-                        <Board title="New customer" />
-                    </div>
-                    <div className="report">
-                         <div className="left">
-                            <img src={Detailedreport} alt="Biểu tượng nhỏ" />
-                            <p>Detaild report</p>
-                        </div>
-                         <div className="right">
-                            <button className="import-button">
-                            <img src={Download} alt="Download" className="button-icon"/>
-                            <span>Import</span>
-                        </button>
-                        <button className="import-button">
-                            <img src={Export} alt="Export" className="button-icon"/>
-                            <span>Export</span>
-                        </button>
-                    </div>
-                </div>
-                     <Table></Table>
                 </div>
             </div>
             <Footer />
