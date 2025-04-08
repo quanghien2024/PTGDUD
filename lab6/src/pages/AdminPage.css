@@ -36,7 +36,7 @@ html, body {
 
 .dash-board {
     display: flex;
-    padding: 20px; 
+    padding-left: 20px; 
     justify-content: space-around; 
     gap: 20px;
     flex-wrap: wrap; 
@@ -60,3 +60,83 @@ html, body {
     border: 1px solid #ccc;
     text-align: center;
 }
+
+.view {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;  
+  }
+  
+  .view img {
+    margin-right: 10px; 
+  }
+
+  .view p {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+
+  .report {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-left: 20px;
+    width: 100%; 
+  }
+  
+  .report .left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .report .left img {
+    margin-right: 10px;
+  }
+  
+  .report .left p {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .report .right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  
+  .report img {
+    margin-right: 10px; 
+  }
+
+  .report p {
+    font-weight: bold; 
+  }
+  
+.import-button {
+    display: flex; 
+    align-items: center; 
+    padding: 8px 12px; 
+    border: 1px solid #ff00aa;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  
+  .import-button:hover {
+    background-color: #eee;
+  }
+  
+  .import-button .button-icon {
+    width: 16px; 
+    height: 16px;
+    margin-right: 5px; 
+  }
+
+  .import-button span {
+    color: rgb(255, 0, 234);  
+  }
+  
+  

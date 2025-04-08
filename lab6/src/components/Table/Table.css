@@ -1,15 +1,150 @@
-.horizontal-container-span {
-    border: 1px solid rgb(59, 207, 200);
-    width: 100%;
-    max-width: 1200px;
-    padding: 10px;
+.table-container {
+  padding: 20px;
+  font-family: sans-serif;
+}
 
-    display: flex;
-    align-items: center; 
-    gap: 15px;        
-    justify-content: center; 
-  }
-  
-  .horizontal-container-span span {
-   margin: 0;
-  }
+.customer-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.customer-table thead {
+  background-color: #f8f9fa;
+}
+
+.customer-table th, .customer-table td {
+  padding: 12px 16px;
+  text-align: left;
+}
+
+.customer-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+}
+
+.customer-name img {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.status {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.status.new {
+  background-color: #e3f2fd;
+  color: #2196f3;
+}
+
+.status.in-progress {
+  background-color: #fff3e0;
+  color: #fb8c00;
+}
+
+.status.completed {
+  background-color: #e0f7fa;
+  color: #26a69a;
+}
+
+.edit-icon {
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.pagination {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: flex-end; 
+}
+
+
+.pagination span {
+  padding: 6px 12px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.pagination .active {
+  background-color: #f06292;
+  color: white;
+}
+
+.results-count {
+  margin-top: 30px;
+  margin-left: 28px;
+  color: rgb(0, 0, 0);
+}
+
+.customer-table input[type="checkbox"] {
+  -webkit-appearance: none; 
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px; 
+  height: 20px;
+  border: 2px solid #ccc; 
+  background-color: white; 
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s ease, border-color 0.2s ease; 
+}
+
+.customer-table input[type="checkbox"]:checked {
+  background-color: #f06292; 
+  border-color: #f06292; 
+}
+
+.customer-table input[type="checkbox"]:hover {
+  background-color: #f1f1f1; 
+}
+
+.edit-button {
+  background: none;  
+  border: none;     
+  padding: 0;       
+  cursor: pointer;   
+}
+
+.edit-button img {
+  width: 16px;  
+  height: 16px; 
+}
+
+
+/* loại bỏ cái vòng tròn bao quanh cây bút nếu muốn
+.edit-button:focus {
+  outline: none; 
+} */
+
+.share {
+  display: flex;   
+  justify-content: space-between;  
+  align-items: center;     
+}
+
+
+/* Căn giữa nội dung cái cột statusstatus */
+.status {
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;  
+  justify-content: center; 
+  align-items: center;    
+  text-align: center;     
+}
+
+
+
