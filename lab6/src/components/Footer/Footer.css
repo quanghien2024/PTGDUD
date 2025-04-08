@@ -1,0 +1,14 @@
+.footer {
+    border: 1px solid rgb(59, 207, 200);
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
+  }
+
+h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+  }
+

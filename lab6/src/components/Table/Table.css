@@ -1,0 +1,15 @@
+.horizontal-container-span {
+    border: 1px solid rgb(59, 207, 200);
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
+
+    display: flex;
+    align-items: center; 
+    gap: 15px;        
+    justify-content: center; 
+  }
+  
+  .horizontal-container-span span {
+   margin: 0;
+  }

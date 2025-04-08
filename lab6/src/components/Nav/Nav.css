@@ -1,0 +1,12 @@
+.nav {
+    height: 100%;
+    width: 100%;
+    border: 1px solid rgb(59, 207, 200);
+}
+
+ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 40px 40px;
+}
+

@@ -1,0 +1,8 @@
+.board {
+    height: 100px;
+    width: 200px;
+    background-color: rgb(56, 139, 48);
+    margin: 5px;
+    border: 1px solid rgb(59, 207, 200);
+}
+
