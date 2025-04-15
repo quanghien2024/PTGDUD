@@ -7,7 +7,12 @@ import Overview from '../assets/Squares four 1.png';
 import Detailedreport from '../assets/Filetext1.png';
 import Download from '../assets/Download.png';
 import Export from '../assets/Moveup.png';
-import './AdminPage.css';
+import './AdminPage.css'; 
+import buttonCart from '../assets/ButtonCart.png';
+import buttonDolar from '../assets/ButtonDollar.png';
+import buttonProfile from '../assets/ButtonProfile.png';
+
+
 
 function OverviewPage() {
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
@@ -82,10 +87,30 @@ function OverviewPage() {
       </div>
 
       <div className="dash-board">
-        <Board title="Turnover" />
-        <Board title="Profit" />
-        <Board title="New customer" />
-      </div>
+            <Board
+                title="Turnover"
+                value="$92,450"
+                subValue="🔺period of change"
+                image={buttonCart}
+                bgColor="lightpink"
+            />
+
+            <Board
+                title="Profit"
+                value="$32,218,218"
+                subValue="🔺period of change"
+                image={buttonDolar}
+                bgColor="lightblue"
+            />
+
+            <Board
+                title="New customer"
+                value="298"
+                subValue="🔺period of change"
+                image={buttonProfile}
+                bgColor="lightblue"
+            />
+        </div>
 
       <div className="report">
         <div className="left">
